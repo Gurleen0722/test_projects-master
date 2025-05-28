@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
     age: { type: Number, required: true}
 });
 
-const User = new mongoose.model('User', SchemaUser);
+const User = new mongoose.model('User', userSchema);
 
 //Controller function 
 const createUser = async (firstname, email, password,age ) =>{
