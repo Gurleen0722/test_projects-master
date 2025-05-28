@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 
 //Creating user model
 const userSchema = new mongoose.Schema({
-    name: {type: String, required: true},
+    firstname: {type: String, required: true},
     email: {type: String, required: true, unique: true},
-    pasword: { type: String, required: true},
+    password: { type: String, required: true},
     age: { type: Number, required: true}
 });
 
