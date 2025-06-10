@@ -1,9 +1,9 @@
 //test suite
 
-describe('test cases for login form ', () => {
+describe('test cases for login form', () => {
   beforeEach(() =>{
     //preconditions
-    cy.visit('http://localhost:3000/home');
+     cy.visit('http://localhost:3000/');
   });
 
   //Positive testing and using AAA pattern
@@ -16,10 +16,8 @@ describe('test cases for login form ', () => {
     cy.get('#login-button').click();
 
     //Assert
-    cy.on('window"alert', (txt) =>{
+    cy.on('window:alert', (txt) =>{
       expect(txt).to.contains('Login Successful!');
-
     });
   });
- 
 });
